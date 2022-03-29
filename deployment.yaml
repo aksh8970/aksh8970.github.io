@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: resumeapp
+  name: resumeapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resumeapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: resumeapp
+    spec:
+      containers:
+      - image: mohitverma1688/resume:latest
+        name: resume
+        resources: {}
+status: {}
